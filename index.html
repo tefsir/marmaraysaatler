@@ -160,6 +160,36 @@
                             Trenlerin güzergah üzerindeki diğer duraklardan geçiş saatleri, ilk kalkış saatinden itibaren tahmini süreler eklenerek hesaplanmıştır. Yoğunluk, teknik arızalar veya resmi tarife değişikliklerinde saatler farklılık gösterebilir. Lütfen seyahatinizi planlarken esnek olunuz.
                         </p>
                     </div>
+
+                    <!-- Yeni Eklenecek Bilgi: Ekspres Hatlar ve Son Trenler -->
+                    <div class="bg-white p-5 rounded-xl shadow-md border-l-4 border-marmaray-red md:col-span-2">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Ekspres Hatlar ve Son Trenler</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Ekspres Detay -->
+                            <div class="border-b sm:border-b-0 sm:border-r border-gray-200 pr-4 pb-4 sm:pb-0">
+                                <h4 class="font-medium text-marmaray-blue mb-2">Ataköy/Pendik Ekspres Detayları</h4>
+                                <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                    <li><span class="font-medium">ATAKÖY Kalkış:</span> 06:05 - 23:00 saatleri arasında, yaklaşık 15-20 dakikada bir.</li>
+                                    <li><span class="font-medium">PENDİK Kalkış:</span> 06:01 - 23:18 saatleri arasında, yaklaşık 15-20 dakikada bir.</li>
+                                    <li>Bu trenler 16 durakta durmaktadır.</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Pendik'ten Son Tren -->
+                            <div class="pl-0 sm:pl-4">
+                                <h4 class="font-medium text-marmaray-blue mb-2">Pendik'ten Son Tren (Zeytinburnu Yönü) Kalkış Saatleri</h4>
+                                <p class="text-xs text-gray-500 italic mb-2">Sadece Pendik'ten hareket eden son trenin istasyonlardan kalkış saatleri:</p>
+                                <div class="grid grid-cols-2 gap-2 text-sm text-gray-700">
+                                    <p>Pendik: <span class="font-medium text-marmaray-red">22:30</span></p>
+                                    <p>Ayrılık Çeşmesi: <span class="font-medium text-marmaray-red">23:19</span></p>
+                                    <p>Kartal: <span class="font-medium text-marmaray-red">22:45</span></p>
+                                    <p>Yenikapı: <span class="font-medium text-marmaray-red">23:25</span></p>
+                                    <p>Bostancı: <span class="font-medium text-marmaray-red">23:04</span></p>
+                                    <p>Zeytinburnu: <span class="font-medium text-marmaray-red">23:44</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -185,54 +215,200 @@
         // Full Schedule Data derived from the provided image
         // Structure: station: [first_weekday, last_weekday, last_weekend, is_major]
         const schedules = {
-            // Gebze'den Kalkış (Halkalı Yönü)
+            // Gebze'den Kalkış (Halkalı Yönü) - Yeni Tarife
             halkali: [
-                { station: "Gebze", first: "05:58", last_wi: "00:22", last_we: "01:22", major: true },
-                { station: "Darıca", first: "06:01", last_wi: "00:25", last_we: "01:25", major: false },
-                { station: "Osmangazi", first: "06:07", last_wi: "00:27", last_we: "01:27", major: false },
-                { station: "Fatih", first: "06:11", last_wi: "00:30", last_we: "01:30", major: false },
-                { station: "Çayırova", first: "06:13", last_wi: "00:32", last_we: "01:32", major: false },
-                { station: "Tuzla", first: "06:03", last_wi: "00:35", last_we: "01:35", major: false },
-                { station: "İçmeler", first: "06:08", last_wi: "00:37", last_we: "01:37", major: false },
-                { station: "Aydıntepe", first: "06:08", last_wi: "00:41", last_we: "01:41", major: false },
-                { station: "Güzelyalı", first: "06:05", last_wi: "00:43", last_we: "01:43", major: false },
-                { station: "Tersane", first: "06:12", last_wi: "00:41", last_we: "01:41", major: false },
-                { station: "Kaynarca", first: "06:10", last_wi: "00:43", last_we: "01:43", major: false },
-                { station: "Pendik", first: "06:02", last_wi: "00:46", last_we: "01:46", major: true },
-                { station: "Yunus", first: "06:07", last_wi: "00:50", last_we: "01:50", major: false },
-                { station: "Kartal", first: "06:08", last_wi: "00:52", last_we: "01:52", major: false },
-                { station: "Başak", first: "06:12", last_wi: "00:56", last_we: "01:56", major: false },
-                { station: "Atalar", first: "06:17", last_wi: "00:59", last_we: "01:59", major: false },
-                { station: "Cevizli", first: "06:02", last_wi: "01:03", last_we: "02:03", major: false },
-                { station: "Maltepe", first: "06:02", last_wi: "01:01", last_we: "02:01", major: false },
-                { station: "Küçükyalı", first: "06:08", last_wi: "01:07", last_we: "02:07", major: false },
-                { station: "İdealtepe", first: "06:11", last_wi: "01:10", last_we: "02:10", major: false },
-                { station: "Süreyya Plajı", first: "06:13", last_wi: "01:12", last_we: "02:12", major: false },
-                { station: "Bostancı", first: "06:04", last_wi: "01:15", last_we: "02:15", major: false },
-                { station: "Suadiye", first: "06:00", last_wi: "01:19", last_we: "02:19", major: false },
-                { station: "Erenköy", first: "06:07", last_wi: "01:21", last_we: "02:21", major: false },
-                { station: "Göztepe", first: "06:02", last_wi: "01:25", last_we: "02:25", major: false },
-                { station: "Feneryolu", first: "06:04", last_wi: "01:27", last_we: "02:27", major: false },
-                { station: "Söğütlü Çeşme", first: "06:08", last_wi: "01:29", last_we: "02:29", major: false },
-                { station: "Ayrılık Çeşmesi", first: "06:10", last_wi: "01:32", last_we: "02:32", major: true },
-                { station: "Üsküdar", first: "06:03", last_wi: "01:36", last_we: "02:36", major: false },
-                { station: "Sirkeci", first: "06:11", last_wi: "01:40", last_we: "02:40", major: true },
-                { station: "Yenikapı", first: "06:10", last_wi: "01:44", last_we: "02:44", major: true },
-                { station: "Kazlıçeşme", first: "06:18", last_wi: "01:48", last_we: "02:48", major: false },
-                { station: "Zeytinburnu", first: "06:00", last_wi: "01:52", last_we: "02:52", major: false },
-                { station: "Yenimahalle", first: "06:02", last_wi: "01:55", last_we: "02:55", major: false },
-                { station: "Bakırköy", first: "06:04", last_wi: "01:57", last_we: "02:57", major: true },
-                { station: "Florya", first: "06:09", last_wi: "02:00", last_we: "03:00", major: false },
-                { station: "Florya Akvaryum", first: "06:14", last_wi: "02:03", last_we: "03:03", major: false },
-                { station: "Küçükçekmece", first: "06:19", last_wi: "02:07", last_we: "03:07", major: false },
-                { station: "Mustafa Kemal", first: "06:22", last_wi: "02:11", last_we: "03:11", major: false },
-                { station: "Halkalı", first: "06:25", last_wi: "02:15", last_we: "03:15", major: true }
+                { station: "Gebze", first: "06:05", last_wi: "22:50", last_we: "01:20", major: true },
+                { station: "Darıca", first: "06:07", last_wi: "22:52", last_we: "01:22", major: false },
+                { station: "Osmangazi", first: "06:09", last_wi: "22:54", last_we: "01:24", major: false },
+                { station: "Fatih", first: "06:11", last_wi: "22:56", last_we: "01:27", major: false },
+                { station: "Çayırova", first: "06:13", last_wi: "22:58", last_we: "01:28", major: false },
+                { station: "Tuzla", first: "06:03", last_wi: "23:02", last_we: "01:32", major: false },
+                { station: "İçmeler", first: "06:06", last_wi: "23:05", last_we: "01:35", major: false },
+                { station: "Aydıntepe", first: "06:08", last_wi: "23:07", last_we: "01:37", major: false },
+                { station: "Güzelyalı", first: "06:10", last_wi: "23:09", last_we: "01:39", major: false },
+                { station: "Tersane", first: "06:12", last_wi: "23:11", last_we: "01:41", major: false },
+                { station: "Kaynarca", first: "06:14", last_wi: "23:13", last_we: "01:43", major: false },
+                { station: "Pendik", first: "06:02", last_wi: "23:16", last_we: "01:46", major: true },
+                { station: "Yunus", first: "06:05", last_wi: "23:19", last_we: "01:49", major: false },
+                { station: "Kartal", first: "06:08", last_wi: "23:22", last_we: "01:52", major: false },
+                { station: "Başak", first: "06:10", last_wi: "23:24", last_we: "01:54", major: false },
+                { station: "Atalar", first: "06:12", last_wi: "23:26", last_we: "01:56", major: false },
+                { station: "Cevizli", first: "06:14", last_wi: "23:28", last_we: "01:58", major: false },
+                { station: "Maltepe", first: "06:02", last_wi: "23:31", last_we: "02:01", major: false },
+                { station: "Süreyya Plajı", first: "06:04", last_wi: "23:33", last_we: "02:03", major: false },
+                { station: "İdealtepe", first: "06:06", last_wi: "23:35", last_we: "02:05", major: false },
+                { station: "Küçükyalı", first: "06:08", last_wi: "23:37", last_we: "02:07", major: false },
+                { station: "Bostancı", first: "06:11", last_wi: "23:40", last_we: "02:10", major: false },
+                { station: "Suadiye", first: "06:13", last_wi: "23:42", last_we: "02:12", major: false },
+                { station: "Erenköy", first: "06:00", last_wi: "23:45", last_we: "02:15", major: false },
+                { station: "Göztepe", first: "06:02", last_wi: "23:47", last_we: "02:17", major: false },
+                { station: "Feneryolu", first: "06:04", last_wi: "23:49", last_we: "02:19", major: false },
+                { station: "Söğütlü Çeşme", first: "06:00", last_wi: "23:52", last_we: "02:22", major: false },
+                { station: "Ayrılık Çeşmesi", first: "06:10", last_wi: "23:55", last_we: "02:25", major: true },
+                { station: "Üsküdar", first: "05:59", last_wi: "23:59", last_we: "02:29", major: false },
+                { station: "Sirkeci", first: "06:03", last_wi: "00:03", last_we: "02:33", major: true },
+                { station: "Yenikapı", first: "06:06", last_wi: "00:06", last_we: "02:36", major: true },
+                { station: "Kazlıçeşme", first: "06:10", last_wi: "00:10", last_we: "02:40", major: false },
+                { station: "Zeytinburnu", first: "06:12", last_wi: "00:12", last_we: "02:41", major: false },
+                { station: "Yenimahalle", first: "06:02", last_wi: "00:15", last_we: "02:45", major: false },
+                { station: "Bakırköy", first: "06:04", last_wi: "00:17", last_we: "02:47", major: true },
+                { station: "Ataköy", first: "06:06", last_wi: "00:19", last_we: "02:49", major: false },
+                { station: "Yeşilyurt", first: "06:09", last_wi: "00:22", last_we: "02:54", major: false },
+                { station: "Yeşilköy", first: "06:11", last_wi: "00:24", last_we: "02:54", major: false },
+                { station: "Florya Akvaryum", first: "06:14", last_wi: "00:27", last_we: "02:57", major: false },
+                { station: "Florya", first: "06:16", last_wi: "00:29", last_we: "02:59", major: false },
+                { station: "Küçükçekmece", first: "06:19", last_wi: "00:32", last_we: "03:02", major: false },
+                { station: "Mustafa Kemal", first: "06:22", last_wi: "00:35", last_we: "03:05", major: false },
+                // Halkalı Varış süresi hesaplanmıştır (Mustafa Kemal + 5 dakika).
+                { station: "Halkalı", first: "06:27", last_wi: "00:40", last_we: "03:10", major: true }
             ],
-            // Halkalı'dan Kalkış (Gebze Yönü)
+            // Halkalı'dan Kalkış (Gebze Yönü) - Yeni Tarife
             gebze: [
-                { station: "Halkalı", first: "05:58", last_wi: "00:43", last_we: "03:13", major: true },
-                { station: "Mustafa Kemal", first: "06:01", last_wi: "00:46", last_we: "03:16", major: false },
-                { station: "Küçükçekmece", first: "06:06", last_wi: "00:51", last_we: "03:21", major: false },
+                { station: "Halkalı", first: "05:58", last_wi: "22:58", last_we: "01:28", major: true },
+                { station: "Mustafa Kemal", first: "06:01", last_wi: "23:01", last_we: "01:31", major: false },
+                { station: "Küçükçekmece", first: "06:03", last_wi: "23:03", last_we: "01:33", major: false },
+                { station: "Florya", first: "06:06", last_wi: "23:06", last_we: "01:36", major: false },
+                { station: "Florya Akvaryum", first: "06:08", last_wi: "23:08", last_we: "01:38", major: false },
+                { station: "Yeşilköy", first: "06:11", last_wi: "23:11", last_we: "01:41", major: false },
+                { station: "Yeşilyurt", first: "06:13", last_wi: "23:13", last_we: "01:43", major: false },
+                { station: "Ataköy", first: "06:02", last_wi: "23:16", last_we: "01:46", major: false },
+                { station: "Bakırköy", first: "06:05", last_wi: "23:19", last_we: "01:49", major: true },
+                { station: "Yenimahalle", first: "06:07", last_wi: "23:21", last_we: "01:51", major: false },
+                { station: "Zeytinburnu", first: "06:10", last_wi: "23:24", last_we: "01:54", major: false },
+                { station: "Kazlıçeşme", first: "06:12", last_wi: "23:26", last_we: "01:56", major: false },
+                { station: "Yenikapı", first: "06:00", last_wi: "23:30", last_we: "02:00", major: true },
+                { station: "Sirkeci", first: "06:03", last_wi: "23:33", last_we: "02:03", major: true },
+                { station: "Üsküdar", first: "06:07", last_wi: "23:37", last_we: "02:07", major: false },
+                { station: "Ayrılık Çeşmesi", first: "06:11", last_wi: "23:41", last_we: "02:11", major: true },
+                { station: "Söğütlü Çeşme", first: "06:00", last_wi: "23:44", last_we: "02:14", major: false },
+                { station: "Feneryolu", first: "06:02", last_wi: "23:46", last_we: "02:16", major: false },
+                { station: "Göztepe", first: "06:04", last_wi: "23:48", last_we: "02:18", major: false },
+                { station: "Erenköy", first: "06:06", last_wi: "23:50", last_we: "02:20", major: false },
+                { station: "Suadiye", first: "06:09", last_wi: "23:53", last_we: "02:23", major: false },
+                { station: "Bostancı", first: "06:11", last_wi: "23:55", last_we: "02:25", major: false },
+                { station: "Küçükyalı", first: "06:14", last_wi: "23:58", last_we: "02:28", major: false },
+                { station: "İdealtepe", first: "06:00", last_wi: "00:00", last_we: "02:30", major: false },
+                { station: "Süreyya Plajı", first: "06:02", last_wi: "00:02", last_we: "02:32", major: false },
+                { station: "Maltepe", first: "06:04", last_wi: "00:04", last_we: "02:34", major: false },
+                { station: "Cevizli", first: "06:07", last_wi: "00:07", last_we: "02:37", major: false },
+                { station: "Atalar", first: "06:09", last_wi: "00:09", last_we: "02:39", major: false },
+                { station: "Başak", first: "06:11", last_wi: "00:11", last_we: "02:41", major: false },
+                { station: "Kartal", first: "06:13", last_wi: "00:13", last_we: "02:43", major: false },
+                { station: "Yunus", first: "06:02", last_wi: "00:16", last_we: "02:46", major: false },
+                { station: "Pendik", first: "06:05", last_wi: "00:19", last_we: "02:49", major: true },
+                { station: "Kaynarca", first: "06:08", last_wi: "00:22", last_we: "02:52", major: false },
+                { station: "Tersane", first: "06:10", last_wi: "00:24", last_we: "02:54", major: false },
+                { station: "Güzelyalı", first: "06:12", last_wi: "00:26", last_we: "02:56", major: false },
+                { station: "Aydıntepe", first: "06:14", last_wi: "00:28", last_we: "02:58", major: false },
+                { station: "İçmeler", first: "06:16", last_wi: "00:30", last_we: "03:00", major: false },
+                { station: "Tuzla", first: "06:19", last_wi: "00:33", last_we: "03:03", major: false },
+                { station: "Çayırova", first: "06:22", last_wi: "00:36", last_we: "03:06", major: false },
+                { station: "Fatih", first: "06:25", last_wi: "00:39", last_we: "03:09", major: false },
+                { station: "Osmangazi", first: "06:27", last_wi: "00:41", last_we: "03:11", major: false },
+                { station: "Darıca", first: "06:29", last_wi: "00:43", last_we: "03:13", major: false },
+                // Gebze Varış süresi hesaplanmıştır (Darıca + 5 dakika).
+                { station: "Gebze", first: "06:34", last_wi: "00:48", last_we: "03:18", major: true }
+            ]
+        };
+
+        let currentDirection = 'halkali';
+        let currentFilter = 'important'; // 'important' or 'all'
+        const tableBody = document.getElementById('table-body');
+        const searchInput = document.getElementById('station-search');
+
+        // Function to render the schedule table
+        function renderSchedule() {
+            const allData = schedules[currentDirection];
+            const searchQuery = searchInput.value.toLowerCase().trim();
+            
+            // 1. Filter based on Search Query
+            let filteredData = allData.filter(item => 
+                item.station.toLowerCase().includes(searchQuery)
+            );
+
+            // 2. Filter based on Importance (if no search query is active)
+            if (currentFilter === 'important' && searchQuery === '') {
+                filteredData = filteredData.filter(item => item.major);
+            }
+
+            tableBody.innerHTML = ''; // Clear existing rows
+
+            if (filteredData.length === 0) {
+                const noResultRow = document.createElement('tr');
+                noResultRow.innerHTML = `<td colspan="4" class="text-center py-6 text-gray-500 italic">Aradığınız kritere uygun durak bulunamadı.</td>`;
+                tableBody.appendChild(noResultRow);
+                return;
+            }
+
+            filteredData.forEach((item, index) => {
+                const row = document.createElement('tr');
+                row.className = index % 2 === 0 ? 'bg-white hover:bg-gray-50' : 'bg-gray-100 hover:bg-gray-200';
+                
+                const stationClass = item.major ? 'font-semibold text-marmaray-red' : 'text-gray-900';
+                const majorIcon = item.major ? ' <span class="text-xs text-marmaray-blue font-bold">(Önemli)</span>' : '';
+
+                row.innerHTML = `
+                    <td class="px-3 py-3 whitespace-nowrap text-sm ${stationClass}">${item.station}${majorIcon}</td>
+                    <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-gray-700">${item.first}</td>
+                    <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-red">${item.last_wi}</td>
+                    <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-blue">${item.last_we}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Event listener for direction tabs
+        document.querySelectorAll('#direction-tabs .tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                currentDirection = button.dataset.direction;
+                
+                // Update active tab styles
+                document.querySelectorAll('#direction-tabs .tab-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Clear search and reset filter on direction change
+                searchInput.value = '';
+                currentFilter = 'important';
+                updateFilterButtonStyles();
+                
+                renderSchedule();
+            });
+        });
+
+        // Function to update filter button styles
+        function updateFilterButtonStyles() {
+            document.querySelectorAll('.filter-button').forEach(btn => {
+                btn.classList.remove('bg-marmaray-red', 'text-white', 'bg-gray-300', 'text-gray-800');
+                if (btn.dataset.filter === currentFilter) {
+                    btn.classList.add('bg-marmaray-red', 'text-white');
+                } else {
+                    btn.classList.add('bg-gray-300', 'text-gray-800');
+                }
+            });
+        }
+
+        // Event listener for filter buttons
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', () => {
+                currentFilter = button.dataset.filter;
+                searchInput.value = ''; // Clear search when filtering
+                updateFilterButtonStyles();
+                renderSchedule();
+            });
+        });
+
+
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ensure the initial filter state is reflected visually
+            updateFilterButtonStyles();
+            // Render initial schedule (Halkalı Yönü, Önemli Duraklar)
+            renderSchedule();
+        });
+    </script>
+</body>
+</html>
+, last_we: "03:21", major: false },
                 { station: "Florya Akvaryum", first: "06:08", last_wi: "00:53", last_we: "03:23", major: false },
                 { station: "Florya", first: "06:11", last_wi: "00:56", last_we: "03:26", major: false },
                 { station: "Bakırköy", first: "06:05", last_wi: "01:06", last_we: "03:36", major: true },
