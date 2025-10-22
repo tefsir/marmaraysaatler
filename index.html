@@ -39,6 +39,20 @@
                 min-height: 250px;
             }
         }
+
+        /* Mobil Uyumlu Tablo Başlıkları için CSS Override */
+        /* Ekran 768px'ten küçük olduğunda (sm ve md breakpoint'leri) */
+        @media (max-width: 768px) {
+            #schedule-table th {
+                padding: 8px 4px; /* Dikey padding azaltıldı */
+                font-size: 0.6rem; /* Font boyutu küçültüldü */
+                line-height: 1;
+            }
+            #schedule-table td {
+                padding: 6px 4px;
+                font-size: 0.7rem; /* Hücre fontu da küçültüldü */
+            }
+        }
     </style>
     <script>
         tailwind.config = {
@@ -82,8 +96,6 @@
         <!-- Center Content (8/12 columns on desktop, full on mobile) -->
         <main class="lg:col-span-8">
             
-            <!-- Info Card - REMOVED -->
-
             <!-- Train Data -->
             <div class="bg-white rounded-xl shadow-2xl p-5">
                 
@@ -113,6 +125,10 @@
                     </div>
                 </div>
 
+                <!-- New Mobile Ad Slot (Visible only on small screens) -->
+                <div class="lg:hidden w-full bg-yellow-50 border border-yellow-400 text-center py-2 mb-4 rounded-lg shadow-sm">
+                    <div class="ad-placeholder h-16">REKLAM ALANI - Mobil İçi (320x50)</div>
+                </div>
 
                 <!-- Schedule Table -->
                 <div class="overflow-x-auto border rounded-lg shadow-inner">
@@ -120,9 +136,9 @@
                         <thead class="bg-marmaray-blue">
                             <tr>
                                 <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">İstasyon</th>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">İlk Tren (Hafta İçi)</th>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (Hafta İçi)</th>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (Hafta Sonu)</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">İlk Tren (H.İçi)</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (H.İçi)</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (H.Sonu)</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200" id="table-body">
@@ -287,7 +303,7 @@
                 const row = document.createElement('tr');
                 row.className = index % 2 === 0 ? 'bg-white hover:bg-gray-50' : 'bg-gray-100 hover:bg-gray-200';
                 
-                // IMPORTANT: Removed ' (Önemli)' text
+                // Renklendirme sadece font-semibold ve text-marmaray-red ile yapılıyor
                 const stationClass = item.major ? 'font-semibold text-marmaray-red' : 'text-gray-900';
 
                 row.innerHTML = `
