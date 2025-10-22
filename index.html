@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marmaray Sefer Saatleri | Güncel Durak ve Saatleri</title>
+    <!-- SEO İYİLEŞTİRMELERİ BAŞLANGIÇ -->
+    <title>2025 Marmaray Sefer Saatleri | Güncel Hafta İçi, Hafta Sonu ve Gece Tarifeleri</title>
+    <meta name="description" content="2025 yılına ait en güncel Marmaray sefer saatleri, Gebze-Halkalı ve Halkalı-Gebze yönleri için hafta içi, hafta sonu (gece dahil) ve resmi tatil kalkış saatlerini buradan hızlıca kontrol edin. İstanbul Marmaray duraklarının tamamı listelenmiştir.">
+    <meta name="keywords" content="2025 Marmaray saatleri, Marmaray gece seferleri, Marmaray hafta sonu, Halkalı Gebze, Gebze Halkalı, Marmaray durakları, Marmaray resmi tatil, Marmaray ilk son tren">
+    <!-- Schema Markup (WebSite) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Marmaray Sefer Saatleri 2025",
+      "url": "https://[sizin-alan-adiniz.com]",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://[sizin-alan-adiniz.com]/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <!-- SEO İYİLEŞTİRMELERİ SONU -->
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -33,6 +52,8 @@
             justify-content: center;
             font-size: 0.8rem;
             color: #b45309; /* Amber 700 */
+            border-style: dashed; /* Reklam alanını görsel olarak ayırmak için */
+            border-color: #fbbf24; /* Sarı ton */
         }
         @media (min-width: 1024px) {
             .ad-placeholder-side {
@@ -41,16 +62,15 @@
         }
 
         /* Mobil Uyumlu Tablo Başlıkları için CSS Override */
-        /* Ekran 768px'ten küçük olduğunda (sm ve md breakpoint'leri) */
         @media (max-width: 768px) {
             #schedule-table th {
-                padding: 8px 4px; /* Dikey padding azaltıldı */
-                font-size: 0.6rem; /* Font boyutu küçültüldü */
+                padding: 8px 4px;
+                font-size: 0.6rem;
                 line-height: 1;
             }
             #schedule-table td {
                 padding: 6px 4px;
-                font-size: 0.7rem; /* Hücre fontu da küçültüldü */
+                font-size: 0.7rem;
             }
         }
     </style>
@@ -67,7 +87,7 @@
         }
     </script>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen flex flex-col">
 
     <!-- Top Advertisement Banner -->
     <div class="w-full bg-yellow-50 border border-yellow-400 text-center py-3 mb-4 rounded-b-lg shadow-sm">
@@ -77,13 +97,14 @@
     <!-- Header Section -->
     <header class="header-bg p-4 shadow-lg">
         <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <!-- H1 Etiketi SEO için kullanıldı -->
             <h1 class="text-xl md:text-3xl font-bold text-white tracking-tight">Marmaray Sefer Saatleri</h1>
-            <img src="https://placehold.co/40x40/ffffff/d12124?text=M" alt="Marmaray Logo Placeholder" class="rounded-full">
+            <img src="https://placehold.co/40x40/ffffff/d12124?text=M" alt="Marmaray tren yolu hattı logosu" class="rounded-full">
         </div>
     </header>
 
     <!-- Main Content Grid -->
-    <div class="max-w-6xl mx-auto p-4 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <div class="max-w-6xl mx-auto p-4 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 flex-grow">
 
         <!-- Left Ad Slot (Desktop Only) -->
         <aside class="hidden lg:block lg:col-span-2">
@@ -102,10 +123,10 @@
                 <!-- Direction Tabs -->
                 <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 mb-4 p-1 bg-gray-100 rounded-lg" id="direction-tabs">
                     <button data-direction="halkali" class="tab-button active flex-1 py-2 px-4 rounded-lg transition duration-150 text-marmaray-blue hover:bg-gray-200">
-                        <span class="font-bold">Halkalı => Gebze</span>
+                        <span class="font-bold">Halkalı'dan => Gebze'ye</span>
                     </button>
                     <button data-direction="gebze" class="tab-button flex-1 py-2 px-4 rounded-lg transition duration-150 text-marmaray-blue hover:bg-gray-200">
-                        <span class="font-bold">Gebze => Halkalı</span>
+                        <span class="font-bold">Gebze'den => Halkalı'ya</span>
                     </button>
                 </div>
 
@@ -136,9 +157,9 @@
                         <thead class="bg-marmaray-blue">
                             <tr>
                                 <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">İstasyon</th>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">İlk Tren (H.İçi)</th>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (H.İçi)</th>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (H.Sonu)</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">İlk Tren</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (Hafta İçi)</th>
+                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (Hafta Sonu)</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200" id="table-body">
@@ -150,7 +171,16 @@
                 
             </div>
             
-            <!-- Additional Information Section - REMOVED -->
+            <!-- YENİ SEO GÖRÜNÜR METİN İYİLEŞTİRMESİ -->
+            <div class="mt-8 p-6 bg-white rounded-xl shadow-md border-t-4 border-marmaray-red">
+                <h2 class="text-xl font-bold text-marmaray-blue mb-3">2025 Güncel Marmaray Sefer ve Gece Saatleri</h2>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    İstanbul'un ulaşım omurgası olan <b>Marmaray</b> hattının <b>2025 yılına ait en güncel sefer saatlerini</b> bu sayfada bulabilirsiniz. Gebze'den Halkalı'ya ve Halkalı'dan Gebze'ye doğru olan tüm yönlerdeki 43 durak için detaylı tarife listelenmiştir. Tablomuzda, hem yoğun günlerdeki ulaşımınızı planlamanız için <b>Hafta İçi</b> hem de <b>Hafta Sonu</b> (Cumartesi-Pazar) tarifeleri mevcuttur. Özellikle Cuma ve Cumartesi geceleri uygulanan <b>Marmaray gece seferleri</b> sayesinde İstanbullular sabaha kadar ulaşım imkanına sahiptir.
+                    <br><br>
+                    Başlıca transfer ve yoğunluk noktaları olan <b>Pendik</b>, <b>Bakırköy</b>, <b>Yenikapı</b>, <b>Sirkeci</b> ve <b>Ayrılık Çeşmesi</b> gibi duraklar <b>kırmızı renkte özel olarak vurgulanmıştır</b>. Tatil dönemlerinde ve <b>resmi tatil günlerinde</b> genellikle Hafta Sonu tarifesi geçerli olmaktadır. Güncel <b>ilk tren saati</b> ve <b>son tren saati</b> bilgilerini hızlıca görüntülemek için yukarıdaki arama çubuğunu kullanabilir, istediğiniz <b>Marmaray durağının</b> (örneğin: <b>Tuzla</b>, <b>Maltepe</b>, <b>Göztepe</b> veya <b>Küçükçekmece</b>) adını yazarak anlık bilgiye ulaşabilirsiniz.
+                </p>
+            </div>
+            <!-- SEO GÖRÜNÜR METİN İYİLEŞTİRMESİ SONU -->
 
         </main>
 
@@ -168,6 +198,19 @@
     <div class="w-full bg-yellow-50 border border-yellow-400 text-center py-3 mt-8 rounded-t-lg shadow-sm">
         <div class="ad-placeholder">REKLAM ALANI - Alt Banner (728x90)</div>
     </div>
+    
+    <!-- YENİ FOOTER BÖLÜMÜ -->
+    <footer class="bg-gray-800 text-white p-6 mt-auto">
+        <div class="max-w-6xl mx-auto text-center text-sm space-y-2">
+            <p class="font-bold text-lg text-marmaray-red">2025 Güncel Marmaray Sefer Saatleri</p>
+            <p>&copy; 2025 Tüm Hakları Saklıdır. Bu sayfadaki saatler bilgilendirme amaçlıdır.</p>
+            <p class="mt-2 text-gray-400">
+                Reklam, işbirliği ve diğer mesajlarınız için lütfen e-posta gönderin:
+                <a href="mailto:iletisim@alanadiniz.com" class="text-yellow-400 hover:text-yellow-300 font-medium underline">iletisim@alanadiniz.com</a>
+            </p>
+        </div>
+    </footer>
+    <!-- FOOTER BÖLÜMÜ SONU -->
 
 
     <script>
@@ -305,9 +348,12 @@
                 
                 // Renklendirme sadece font-semibold ve text-marmaray-red ile yapılıyor
                 const stationClass = item.major ? 'font-semibold text-marmaray-red' : 'text-gray-900';
+                
+                // YILDIZ İKONU KALDIRILDI ve SADECE KALINLAŞTIRMA KALDI
+                const stationNameDisplay = item.station;
 
                 row.innerHTML = `
-                    <td class="px-3 py-3 whitespace-nowrap text-sm ${stationClass}">${item.station}</td>
+                    <td class="px-3 py-3 whitespace-nowrap text-sm ${stationClass} flex items-center">${stationNameDisplay}</td>
                     <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-gray-700">${item.first}</td>
                     <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-red">${item.last_wi}</td>
                     <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-blue">${item.last_we}</td>
