@@ -9,8 +9,8 @@
     <meta name="keywords" content="2025 Marmaray saatleri, Marmaray gece seferleri, Marmaray hafta sonu, Halkalı Gebze, Gebze Halkalı, Marmaray durakları, Marmaray resmi tatil, Marmaray ilk son tren">
     
     <!-- FAVICON LINKİ BURAYA EKLENDİ -->
+    <!-- NOT: Bu link, sitenizin kök dizinine yüklediğiniz "favicon.ico" dosyasını işaret eder. -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!-- VEYA PNG KULLANILACAKSA: <link rel="icon" type="image/png" href="/favicon.png"> -->
     
     <!-- Schema Markup (WebSite) - DOLDURULACAK ALANLAR İÇİN ÖNERİLER EKLENDİ -->
     <script type="application/ld+json">
@@ -121,7 +121,7 @@
         <div class="max-w-6xl mx-auto flex items-center justify-between">
             <!-- H1 Etiketi SEO için kullanıldı -->
             <h1 class="text-xl md:text-3xl font-bold text-white tracking-tight">Marmaray Sefer Saatleri</h1>
-            <!-- Logo URL'si ile Güncellendi -->
+            <!-- Logo URL'si yerel dosyayı gösterecek şekilde güncellendi -->
             <img src="/Marmaray.png" alt="Marmaray tren yolu hattı logosu" class="h-10 w-10 object-contain rounded-full">
         </div>
     </header>
@@ -243,7 +243,7 @@
         const schedules = {
             // Gebze'den Kalkış (Halkalı Yönü) - Yeni Tarife
             halkali: [
-                // Önemli istasyonlar: Gebze, Pendik, Bostancı, Maltepe, Söğütlüçeşme, Ayrılık Çeşmesi, Üsküdar, Sirkeci, Yenikapı, Bakırköy, Ataköy, Halkalı
+                // Önemli istasyonlar: Gebze, Pendik, Bostancı, Maltepe, Söğütlü Çeşme, Ayrılık Çeşmesi, Üsküdar, Sirkeci, Yenikapı, Bakırköy, Ataköy, Halkalı
                 { station: "Gebze", first: "06:05", last_wi: "22:50", last_we: "01:20", major: true },
                 { station: "Darıca", first: "06:07", last_wi: "22:52", last_we: "01:22", major: false },
                 { station: "Osmangazi", first: "06:09", last_wi: "22:54", last_we: "01:24", major: false },
@@ -270,7 +270,7 @@
                 { station: "Erenköy", first: "06:00", last_wi: "23:45", last_we: "02:15", major: false },
                 { station: "Göztepe", first: "06:02", last_wi: "23:47", last_we: "02:17", major: false },
                 { station: "Feneryolu", first: "06:04", last_wi: "23:49", last_we: "02:19", major: false },
-                { station: "Söğütlüçeşme", first: "06:00", last_wi: "23:52", last_we: "02:22", major: true },
+                { station: "Söğütlü Çeşme", first: "06:00", last_wi: "23:52", last_we: "02:22", major: true },
                 { station: "Ayrılık Çeşmesi", first: "06:10", last_wi: "23:55", last_we: "02:25", major: true },
                 { station: "Üsküdar", first: "05:59", last_wi: "23:59", last_we: "02:29", major: true },
                 { station: "Sirkeci", first: "06:03", last_wi: "00:03", last_we: "02:33", major: true },
@@ -291,7 +291,7 @@
             ],
             // Halkalı'dan Kalkış (Gebze Yönü) - Yeni Tarife
             gebze: [
-                // Önemli istasyonlar: Halkalı, Ataköy, Bakırköy, Yenikapı, Sirkeci, Üsküdar, Ayrılık Çeşmesi, Söğütlüçeşme, Maltepe, Bostancı, Pendik, Gebze
+                // Önemli istasyonlar: Halkalı, Ataköy, Bakırköy, Yenikapı, Sirkeci, Üsküdar, Ayrılık Çeşmesi, Söğütlü Çeşme, Maltepe, Bostancı, Pendik, Gebze
                 { station: "Halkalı", first: "05:58", last_wi: "22:58", last_we: "01:28", major: true },
                 { station: "Mustafa Kemal", first: "06:01", last_wi: "23:01", last_we: "01:31", major: false },
                 { station: "Küçükçekmece", first: "06:03", last_wi: "23:03", last_we: "01:33", major: false },
@@ -308,7 +308,7 @@
                 { station: "Sirkeci", first: "06:03", last_wi: "23:33", last_we: "02:03", major: true },
                 { station: "Üsküdar", first: "06:07", last_wi: "23:37", last_we: "02:07", major: true },
                 { station: "Ayrılık Çeşmesi", first: "06:11", last_wi: "23:41", last_we: "02:11", major: true },
-                { station: "Söğütlüçeşme", first: "06:00", last_wi: "23:44", last_we: "02:14", major: true },
+                { station: "Söğütlü Çeşme", first: "06:00", last_wi: "23:44", last_we: "02:14", major: true },
                 { station: "Feneryolu", first: "06:02", last_wi: "23:46", last_we: "02:16", major: false },
                 { station: "Göztepe", first: "06:04", last_wi: "23:48", last_we: "02:18", major: false },
                 { station: "Erenköy", first: "06:06", last_wi: "23:50", last_we: "02:20", major: false },
