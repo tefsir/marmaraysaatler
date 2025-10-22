@@ -73,6 +73,11 @@
                 font-size: 0.7rem;
             }
         }
+        /* Tablo genişliklerini yönetmek için özel sınıf */
+        .w-station { width: 40%; }
+        .w-time { width: 20%; text-align: center; }
+        .text-center-force { text-align: center; }
+
     </style>
     <script>
         tailwind.config = {
@@ -156,10 +161,10 @@
                     <table class="min-w-full divide-y divide-gray-200" id="schedule-table">
                         <thead class="bg-marmaray-blue">
                             <tr>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">İstasyon</th>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">İlk Tren</th>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (Hafta İçi)</th>
-                                <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Son Tren (Hafta Sonu)</th>
+                                <th scope="col" class="w-station px-3 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">İstasyon</th>
+                                <th scope="col" class="w-time px-3 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">İlk Tren</th>
+                                <th scope="col" class="w-time px-3 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">Son Tren (Hafta İçi)</th>
+                                <th scope="col" class="w-time px-3 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">Son Tren (Hafta Sonu)</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200" id="table-body">
@@ -349,14 +354,13 @@
                 // Renklendirme sadece font-semibold ve text-marmaray-red ile yapılıyor
                 const stationClass = item.major ? 'font-semibold text-marmaray-red' : 'text-gray-900';
                 
-                // YILDIZ İKONU KALDIRILDI ve SADECE KALINLAŞTIRMA KALDI
                 const stationNameDisplay = item.station;
 
                 row.innerHTML = `
-                    <td class="px-3 py-3 whitespace-nowrap text-sm ${stationClass} flex items-center">${stationNameDisplay}</td>
-                    <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-gray-700">${item.first}</td>
-                    <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-red">${item.last_wi}</td>
-                    <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-blue">${item.last_we}</td>
+                    <td class="w-station px-3 py-3 whitespace-nowrap text-sm ${stationClass}">${stationNameDisplay}</td>
+                    <td class="w-time px-3 py-3 whitespace-nowrap text-sm font-medium text-gray-700 text-center-force">${item.first}</td>
+                    <td class="w-time px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-red text-center-force">${item.last_wi}</td>
+                    <td class="w-time px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-blue text-center-force">${item.last_we}</td>
                 `;
                 tableBody.appendChild(row);
             });
