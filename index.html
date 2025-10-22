@@ -7,7 +7,8 @@
     <title>2025 Marmaray Sefer Saatleri | Güncel Hafta İçi, Hafta Sonu ve Gece Tarifeleri</title>
     <meta name="description" content="2025 yılına ait en güncel Marmaray sefer saatleri, Gebze-Halkalı ve Halkalı-Gebze yönleri için hafta içi, hafta sonu (gece dahil) ve resmi tatil kalkış saatlerini buradan hızlıca kontrol edin. İstanbul Marmaray duraklarının tamamı listelenmiştir.">
     <meta name="keywords" content="2025 Marmaray saatleri, Marmaray gece seferleri, Marmaray hafta sonu, Halkalı Gebze, Gebze Halkalı, Marmaray durakları, Marmaray resmi tatil, Marmaray ilk son tren">
-    <!-- Schema Markup (WebSite) -->
+    
+    <!-- Schema Markup (WebSite) - DOLDURULACAK ALANLAR İÇİN ÖNERİLER EKLENDİ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -22,6 +23,17 @@
     }
     </script>
     <!-- SEO İYİLEŞTİRMELERİ SONU -->
+
+    <!-- GOOGLE ANALYTICS KODU BURAYA GELECEK (HEAD sonuna yakın) -->
+    <!-- Örneğin:
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -73,9 +85,10 @@
                 font-size: 0.7rem;
             }
         }
-        /* Tablo genişliklerini yönetmek için özel sınıf */
-        .w-station { width: 40%; }
-        .w-time { width: 20%; text-align: center; }
+        /* Tablo genişliklerini yönetmek için özel sınıf - GÜNCELLENDİ */
+        /* w-station: %30, w-time: %70 / 3 = %23.33 (3 sütun için) */
+        .w-station { width: 30%; }
+        .w-time { width: 23.33%; text-align: center; }
         .text-center-force { text-align: center; }
 
     </style>
@@ -176,6 +189,11 @@
                 
             </div>
             
+            <!-- Bottom Advertisement Banner (YENİ KONUM) -->
+            <div class="w-full bg-yellow-50 border border-yellow-400 text-center py-3 mt-8 rounded-lg shadow-sm">
+                <div class="ad-placeholder">REKLAM ALANI - Alt Banner (728x90)</div>
+            </div>
+
             <!-- YENİ SEO GÖRÜNÜR METİN İYİLEŞTİRMESİ -->
             <div class="mt-8 p-6 bg-white rounded-xl shadow-md border-t-4 border-marmaray-red">
                 <h2 class="text-xl font-bold text-marmaray-blue mb-3">2025 Güncel Marmaray Sefer ve Gece Saatleri</h2>
@@ -199,10 +217,6 @@
 
     </div>
 
-    <!-- Bottom Advertisement Banner -->
-    <div class="w-full bg-yellow-50 border border-yellow-400 text-center py-3 mt-8 rounded-t-lg shadow-sm">
-        <div class="ad-placeholder">REKLAM ALANI - Alt Banner (728x90)</div>
-    </div>
     
     <!-- YENİ FOOTER BÖLÜMÜ -->
     <footer class="bg-gray-800 text-white p-6 mt-auto">
