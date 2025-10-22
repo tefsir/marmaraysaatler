@@ -82,11 +82,7 @@
         <!-- Center Content (8/12 columns on desktop, full on mobile) -->
         <main class="lg:col-span-8">
             
-            <!-- Info Card -->
-            <div class="bg-white p-5 rounded-xl shadow-md mb-8 border-t-4 border-marmaray-blue">
-                <h2 class="text-xl font-semibold text-gray-800 mb-3">Güncel Marmaray Sefer Tablosu</h2>
-                <p class="text-gray-600 text-sm">Aşağıdaki saatler, Marmaray hattının tüm duraklarından geçen ilk ve son tren saatlerini göstermektedir. <span class="marmaray-red font-semibold">Hafta İçi İlk Tren</span> saatleri kalkış sıklığı için referans alınabilir. Saatler TCDD Taşımacılık resmi kaynaklarından derlenmiştir.</p>
-            </div>
+            <!-- Info Card - REMOVED -->
 
             <!-- Train Data -->
             <div class="bg-white rounded-xl shadow-2xl p-5">
@@ -94,10 +90,10 @@
                 <!-- Direction Tabs -->
                 <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 mb-4 p-1 bg-gray-100 rounded-lg" id="direction-tabs">
                     <button data-direction="halkali" class="tab-button active flex-1 py-2 px-4 rounded-lg transition duration-150 text-marmaray-blue hover:bg-gray-200">
-                        <span class="font-bold">Halkalı Yönü</span> (Gebze'den Kalkış)
+                        <span class="font-bold">Halkalı => Gebze</span>
                     </button>
                     <button data-direction="gebze" class="tab-button flex-1 py-2 px-4 rounded-lg transition duration-150 text-marmaray-blue hover:bg-gray-200">
-                        <span class="font-bold">Gebze Yönü</span> (Halkalı'dan Kalkış)
+                        <span class="font-bold">Gebze => Halkalı</span>
                     </button>
                 </div>
 
@@ -138,60 +134,7 @@
                 
             </div>
             
-            <!-- Additional Information Section -->
-            <div class="mt-10">
-                <h2 class="text-2xl font-bold text-marmaray-blue mb-4 border-b-2 border-marmaray-red pb-2">Ek Bilgiler ve Notlar</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    
-                    <!-- Ekspres Seferler -->
-                    <div class="bg-white p-5 rounded-xl shadow-md border-l-4 border-marmaray-red">
-                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Ataköy/Pendik Ekspres Seferleri</h3>
-                        <p class="text-sm text-gray-600 mb-2">Belirtilen saatler arasında, daha az durakta durarak hızlı ulaşım sağlayan ekspres trenler mevcuttur.</p>
-                        <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                            <li><span class="font-medium">ATAKÖY Kalkış:</span> Yaklaşık 15-20 dakikada bir.</li>
-                            <li><span class="font-medium">PENDİK Kalkış:</span> Yaklaşık 15-20 dakikada bir.</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Genel Uyarı -->
-                    <div class="bg-white p-5 rounded-xl shadow-md border-l-4 border-marmaray-blue">
-                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Önemli Seyahat Uyarısı</h3>
-                        <p class="text-sm text-gray-600 space-y-1">
-                            Trenlerin güzergah üzerindeki diğer duraklardan geçiş saatleri, ilk kalkış saatinden itibaren tahmini süreler eklenerek hesaplanmıştır. Yoğunluk, teknik arızalar veya resmi tarife değişikliklerinde saatler farklılık gösterebilir. Lütfen seyahatinizi planlarken esnek olunuz.
-                        </p>
-                    </div>
-
-                    <!-- Yeni Eklenecek Bilgi: Ekspres Hatlar ve Son Trenler -->
-                    <div class="bg-white p-5 rounded-xl shadow-md border-l-4 border-marmaray-red md:col-span-2">
-                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Ekspres Hatlar ve Son Trenler</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- Ekspres Detay -->
-                            <div class="border-b sm:border-b-0 sm:border-r border-gray-200 pr-4 pb-4 sm:pb-0">
-                                <h4 class="font-medium text-marmaray-blue mb-2">Ataköy/Pendik Ekspres Detayları</h4>
-                                <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                                    <li><span class="font-medium">ATAKÖY Kalkış:</span> 06:05 - 23:00 saatleri arasında, yaklaşık 15-20 dakikada bir.</li>
-                                    <li><span class="font-medium">PENDİK Kalkış:</span> 06:01 - 23:18 saatleri arasında, yaklaşık 15-20 dakikada bir.</li>
-                                    <li>Bu trenler 16 durakta durmaktadır.</li>
-                                </ul>
-                            </div>
-                            
-                            <!-- Pendik'ten Son Tren -->
-                            <div class="pl-0 sm:pl-4">
-                                <h4 class="font-medium text-marmaray-blue mb-2">Pendik'ten Son Tren (Zeytinburnu Yönü) Kalkış Saatleri</h4>
-                                <p class="text-xs text-gray-500 italic mb-2">Sadece Pendik'ten hareket eden son trenin istasyonlardan kalkış saatleri:</p>
-                                <div class="grid grid-cols-2 gap-2 text-sm text-gray-700">
-                                    <p>Pendik: <span class="font-medium text-marmaray-red">22:30</span></p>
-                                    <p>Ayrılık Çeşmesi: <span class="font-medium text-marmaray-red">23:19</span></p>
-                                    <p>Kartal: <span class="font-medium text-marmaray-red">22:45</span></p>
-                                    <p>Yenikapı: <span class="font-medium text-marmaray-red">23:25</span></p>
-                                    <p>Bostancı: <span class="font-medium text-marmaray-red">23:04</span></p>
-                                    <p>Zeytinburnu: <span class="font-medium text-marmaray-red">23:44</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Additional Information Section - REMOVED -->
 
         </main>
 
@@ -344,11 +287,11 @@
                 const row = document.createElement('tr');
                 row.className = index % 2 === 0 ? 'bg-white hover:bg-gray-50' : 'bg-gray-100 hover:bg-gray-200';
                 
+                // IMPORTANT: Removed ' (Önemli)' text
                 const stationClass = item.major ? 'font-semibold text-marmaray-red' : 'text-gray-900';
-                const majorIcon = item.major ? ' <span class="text-xs text-marmaray-blue font-bold">(Önemli)</span>' : '';
 
                 row.innerHTML = `
-                    <td class="px-3 py-3 whitespace-nowrap text-sm ${stationClass}">${item.station}${majorIcon}</td>
+                    <td class="px-3 py-3 whitespace-nowrap text-sm ${stationClass}">${item.station}</td>
                     <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-gray-700">${item.first}</td>
                     <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-red">${item.last_wi}</td>
                     <td class="px-3 py-3 whitespace-nowrap text-sm font-medium text-marmaray-blue">${item.last_we}</td>
